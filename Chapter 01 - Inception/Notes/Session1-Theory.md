@@ -53,6 +53,8 @@ Example usage:
 
 ```html
 <script src="https://example.com/script.js" crossorigin="anonymous"></script>
+```
+
 
 
 ## Q: Difference Between `React` and `ReactDOM`
@@ -98,6 +100,7 @@ A: `Development` is the stage of an application before it's made public while `p
   <h1>Hello, world!</h1>
 </body>
 </html>
+```
 
 ### `defer`
 
@@ -122,7 +125,7 @@ The `defer` attribute is used in the `<script>` tag to control how JavaScript fi
   <h1>Hello, world!</h1>
 </body>
 </html>
-
+```
 
 
 ## What is `type="module"`?
@@ -155,4 +158,4 @@ The `type="module"` attribute in the `<script>` tag specifies that the script sh
   <h1>Hello, world!</h1>
 </body>
 </html>
-
+```
