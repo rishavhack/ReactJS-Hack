@@ -1,4 +1,4 @@
-# _Chapter 01 - Inception_
+# _Chapter 02 - Igniting our App_
 
 ## Q: What is `Emmet`?
 A: `Emmet` is a toolkit for web developers that helps you write HTML and CSS code faster and more efficiently.
