@@ -1,38 +1,19 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// Below is the way to add any tag in html 
-// const header = (document.createElement("h1"));
-// header.innerHTML = "Pranam Javascript"
-// const root = document.getElementById("root");
-//root.innerHtml = ''
-// root.appendChild(header)
+// const heading = (<h1 className="head" tabIndex="5">Pranam React </h1>)
 
-
-// Below is the way to do same above thing using react
+// const HeaderComponent = () => (<div id="container"><h1 className="heading"> {heading} Pranam React 1</h1></div>)
 
 
-const header = React.createElement('h1',{id:'h1Tag'},'Pranam Javascript')
-
-const heading1 = React.createElement(
-    "h1",
-    {
-      id: "title",
-      style: {
-        background:"red",
-      },
-      className:"title"
-    },
-    "heading"
-  );
+const Title = () => (<h1 className="head" tabIndex="5">Pranam React </h1>)
+const elem = <span>React Pranam elment</span>
+const HeaderComponent = () => (<div id="container"><h1 className="heading"> {<Title/>} Pranam React {1 + 7} <br></br> {elem}</h1></div>)
 
 
-  const container = React.createElement(
-    "div",
-    {
-      id: "container",
-    },
-    [header, heading1]
-  );
-  
 const root = ReactDOM.createRoot(document.getElementById('root'))
 //root.render([header,heading1])
-root.render(container)
+
+// root.render([heading,HeaderComponent()])
+
+ root.render([<HeaderComponent />,elem])
