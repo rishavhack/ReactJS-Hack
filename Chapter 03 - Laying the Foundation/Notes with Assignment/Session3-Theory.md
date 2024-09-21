@@ -320,3 +320,39 @@ By using JSX, you minimize the risk of code injection attacks. Since JSX automat
 
 ### Conclusion
 Overall, JSX offers significant benefits in terms of security, readability, simplicity, and error handling, making it a valuable tool for React developers.
+
+
+### Preventing Cross-Site Scripting with JSX
+
+Here’s an example in React that demonstrates how JSX sanitizes data to prevent cross-site scripting (XSS) attacks. In this example, we’ll simulate an API response that might include malicious code, and show how JSX handles it safely.
+
+```javascript
+import React from 'react';
+
+const App = () => {
+  // Simulating an API response that contains malicious code
+  const apiResponse = {
+    userInput: '<script>alert("Hacked!");</script>', // Malicious script
+  };
+
+  return (
+    <div>
+      <h1>User Input</h1>
+      {/* JSX sanitizes the user input, rendering it as plain text */}
+      <div>{apiResponse.userInput}</div>
+      {/* This will display the string '<script>alert("Hacked!");</script>' instead of executing it */}
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+### Explanation
+
+1. Malicious Input: In this example, apiResponse.userInput simulates data that might come from an API. It contains a malicious script tag that, if executed, would create an alert.
+
+2. JSX Rendering: When we render {apiResponse.userInput} inside a <div>, JSX automatically sanitizes the input. Instead of executing the script, it displays the string <script>alert("Hacked!");</script> as plain text.
+
+3. Safety: This behavior prevents the execution of malicious scripts and protects users from XSS attacks, demonstrating one of the key advantages of using JSX.

@@ -250,7 +250,7 @@ node_modules
 ```
 
 
-## q:  Difference Between `package.json` and `package-lock.json`
+## Q:  Difference Between `package.json` and `package-lock.json`
 
 | Feature                       | `package.json`                                            | `package-lock.json`                                      |
 |-------------------------------|---------------------------------------------------------- |----------------------------------------------------------|
